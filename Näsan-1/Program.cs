@@ -43,6 +43,14 @@ for (int j = 0; j < 5; j++)
     }
 }
 
-
+// Punkt 7 - osäker på tryparse
+bool successful = false;
+while (successful == false)
+{
+    Console.WriteLine("Please write a number or something");
+    string convert = Console.ReadLine();
+    int number;
+    successful = int.TryParse(convert, out number);
+}
 
 Console.ReadLine();
