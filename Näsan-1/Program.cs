@@ -53,4 +53,29 @@ while (successful == false)
     successful = int.TryParse(convert, out number);
 }
 
+// Punkt 8 - SLUTÖVNING
+int rNum= Random.Shared.Next();
+// string guess = "";
+// while (guess == )
+// {
+//     Console.WriteLine("Guess the number");
+//     guess = Console.ReadLine();
+//     int guessedNum;
+//     bool success = int.TryParse(guess, out guessedNum);
+    
+//     if (guessedNum > rNum)
+//     {
+//         Console.WriteLine("Your guess is too high");
+//     }
+//     else if (guessedNum < rNum)
+//     {
+//         Console.WriteLine("Your guess is too low");
+//     }
+//     else 
+//     {
+//         Console.WriteLine("Your guess is correct");
+//     }
+// }
+
+
 Console.ReadLine();
