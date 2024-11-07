@@ -19,7 +19,11 @@ else
     Console.WriteLine("Wrong username or password");
 }
 
-
+// Punkt 4
+for (int i = 0; i < 32; i++)
+{
+    Console.WriteLine("Hello, World");
+}
 
 
 
