@@ -30,6 +30,19 @@ else
     Console.WriteLine("Wrong username or password");
 }
 
+// Punkt 6
+for (int j = 0; j < 5; j++)
+{
+    Console.WriteLine("Please write a number");
+    string answer3 = Console.ReadLine();
+    int number;
+    bool success = int.TryParse(answer3, out number);
+    if (number > 5)
+    {
+        Console.WriteLine("högre än 5!");
+    }
+}
+
 
 
 Console.ReadLine();
