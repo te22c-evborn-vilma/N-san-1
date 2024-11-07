@@ -1,4 +1,6 @@
 ﻿// Punkt 1
+using System.Reflection.Metadata.Ecma335;
+
 if (6 > 3 || 6 == 3)
 {
     Console.WriteLine("Hello World!");
@@ -54,28 +56,35 @@ while (successful == false)
 }
 
 // Punkt 8 - SLUTÖVNING
-int rNum= Random.Shared.Next();
-// string guess = "";
-// while (guess == )
-// {
-//     Console.WriteLine("Guess the number");
-//     guess = Console.ReadLine();
-//     int guessedNum;
-//     bool success = int.TryParse(guess, out guessedNum);
-    
-//     if (guessedNum > rNum)
-//     {
-//         Console.WriteLine("Your guess is too high");
-//     }
-//     else if (guessedNum < rNum)
-//     {
-//         Console.WriteLine("Your guess is too low");
-//     }
-//     else 
-//     {
-//         Console.WriteLine("Your guess is correct");
-//     }
-// }
+int rNum = Random.Shared.Next(1,101);
+int guess = 0;
+bool succeded = false;
 
+while (guess != rNum)
+{
+    Console.WriteLine("Guess a number between 1 and 100");
+    string answer = Console.ReadLine();
+    succeded = int.TryParse(answer, out guess);
+    if (succeded)
+    {
+        if (guess > rNum)
+        {
+            Console.WriteLine("Your guess is too high");
+        }
+        else if (guess < rNum)
+        {
+            Console.WriteLine("Your guess is too low");
+        }
+        else 
+        {
+            Console.WriteLine("Congrats! Your guess is correct");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Your guess was not valid. Try again");
+    }
+}
 
 Console.ReadLine();
+
